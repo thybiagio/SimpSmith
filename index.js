@@ -181,9 +181,6 @@ const renderables = [
   foreground
 ]
 
-const battle = {
-  initiated: false
-}
 
 function animate() {
   const animationId = window.requestAnimationFrame(animate)
