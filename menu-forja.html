@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu do Ferreiro</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Press Start 2P", monospace;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, #2b1d12, #0f0a07);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .menu {
+            width: 900px;
+            height: 600px;
+            border: 6px solid #c49a6c;
+            background: linear-gradient(#3a2a1d, #1a120b);
+            box-shadow: 0 0 40px rgba(0,0,0,0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .titulo {
+            text-align: center;
+            color: #f5d7a1;
+            font-size: 28px;
+            text-shadow: 3px 3px 0 #000;
+        }
+
+        .forja {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px dashed #8b5e3c;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .forja::before {
+            content: "🔥 FORJA DO FERREIRO 🔥";
+            position: absolute;
+            color: #ffb347;
+            font-size: 14px;
+            top: 10px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            color: #f0e0c0;
+            font-size: 12px;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+            background: #8b5e3c;
+            border: 3px solid #f5d7a1;
+            color: #fff3d1;
+            cursor: pointer;
+            font-size: 12px;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #a06b44;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .stats {
+            font-size: 11px;
+            color: #d8c3a5;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <div class="titulo">
+            🔨 SIMPSMITH - MENU DO FERREIRO 🔨
+        </div>
+
+        <div class="forja">
+
+            <div style="text-align:center;color:#caa472;font-size:10px;">
+                Escolha suas ações de forja<br><br>
+                (futuro: upgrades, crafting, armas)
+            </div>
+
+        </div>
+
+
+
+        <div class="botoes">
+
+            <button onclick="window.location.href='./game.html'">
+                INICIAR FORJA
+            </button>
+
+            <button onclick="alert('Em breve: upgrades')">
+                MELHORIAS
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
