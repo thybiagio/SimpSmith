@@ -1,4 +1,7 @@
-class Sprite {
+// src/entities/Sprite.js
+import { c } from '../canvas.js'
+
+export class Sprite {
   constructor({
     position,
     velocity,
@@ -81,49 +84,5 @@ class Sprite {
       if (this.frames.val < this.frames.max - 1) this.frames.val++
       else this.frames.val = 0
     }
-  }
-}
-
-
-class Boundary {
-  static width = 48
-  static height = 48
-  constructor({ position }) {
-    this.position = position
-    this.width = 48
-    this.height = 48
-  }
-
-  draw() {
-    c.fillStyle = 'rgba(255, 0, 0, 0)'
-    c.fillRect(this.position.x, this.position.y, this.width, this.height)
-  }
-}
-
-class Character extends Sprite {
-  constructor({
-    position,
-    velocity,
-    image,
-    frames = { max: 1, hold: 10 },
-    sprites,
-    animate = false,
-    rotation = 0,
-    scale = 1,
-    dialogue = ['']
-  }) {
-    super({
-      position,
-      velocity,
-      image,
-      frames,
-      sprites,
-      animate,
-      rotation,
-      scale
-    })
-
-    this.dialogue = dialogue
-    this.dialogueIndex = 0
   }
 }
